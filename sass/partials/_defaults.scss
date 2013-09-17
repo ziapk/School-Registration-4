@@ -229,8 +229,8 @@ blockquote p {
 .alert span {
 	float: right;
 	font-size: fontCalc(20);
-	position: relative;
-	right: -$default-margin*3.5;
+	position:absolute;
+	right: 0;
 }
 .alert-error {
 	background-color: $light-red;

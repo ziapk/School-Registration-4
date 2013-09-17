@@ -63,8 +63,6 @@ $icon_font_size: 20px;
 
 
 .ya-school-registration-step4 {
-    padding: $margin_padding * 2;
-    min-width: 960px;
 	h1 {
 		font: $PageHeading;
 		border-bottom: $NormalLine;
@@ -197,6 +195,16 @@ span[data-icon] {
 	background-color: $Lightgray;
 	*border: 1px solid $Gray;
 }
+#ie7{
+	.accordion-toggle{
+		&:hover{
+			text-decoration:none !important;
+		}
+		&:focus{
+			text-decoration:none !important;
+		}
+	}
+}
 .ya-new-session-container {
 	@include yellow-panel;
 	display: none;
@@ -204,26 +212,23 @@ span[data-icon] {
 		@include makeFluidRow();
 		margin: $margin_padding * 2 0;
 		input {
-			width:95%;
+			width:100%;
+			*width : 95%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			height:auto;
 		}
 		textarea {
-			width: 95%;
+			width:100%;
+			*width : 95%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			height:auto;
 			height: 100px;
+			display:block;
 		}
-		.ya-new-session-module {
-			@include makeFluidColumn(2);
-		}
-		.ya-new-session-title {
-			@include makeFluidColumn(3);
-		}
-		.ya-new-session-description {
-			@include makeFluidColumn(3.5);
-		}
-		.ya-new-session-objective {
-			@include makeFluidColumn(3.5);
-		}
-
-
 		.ya-new-session-category {
 			@include makeFluidColumn(2.6);	
 		}
@@ -275,7 +280,6 @@ select.ya-empty {
 .ya-learning-objective-list {
 	@include makeFluidRow();
 	.ya-learning-objective-item {
-		@include makeFluidColumn(4);
 		textarea {
 			width: 96%;
 			height: 100px;
