@@ -193,8 +193,8 @@ blockquote p {
 .alert span {
   float: right;
   font-size: 20px;
-  position: relative;
-  right: -35px;
+  position: absolute;
+  right: 0;
 }
 
 .alert-error {
@@ -484,6 +484,7 @@ table.table .ya-total {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
+.btn-success:focus,
 .btn-success:hover,
 .btn-success:active,
 .btn-success.active,
@@ -787,14 +788,6 @@ span[data-icon="E"], span[data-icon="C"] {
 
 .ya-i-teach label.checkbox {
   margin: 6px 0 6px 6px;
-}
-
-.container-fluid {
-  background-color: white;
-  max-width: 1170px;
-  margin: 0 auto;
-  border-radius: 6px;
-  border: 1px solid #4e453e;
 }
 
 span[data-icon] {

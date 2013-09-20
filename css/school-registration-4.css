@@ -1245,10 +1245,6 @@ scss file for school registration 4
 /** Global Radius **/
 /** Global Lines **/
 /** Global Drop Shadow **/
-.ya-school-registration-step4 {
-  padding: 30px;
-  min-width: 960px;
-}
 .ya-school-registration-step4 h1 {
   font: 36px "ProximaNova-Regular";
   border-bottom: 1px solid #d3d1c7;
@@ -1372,6 +1368,10 @@ span[data-icon] {
   margin: 5px 0 0 0;
 }
 
+#ie7 .ya-yoga-type-list {
+  width: 39%;
+}
+
 .ya-school-registration-btn-group {
   width: 100%;
   *zoom: 1;
@@ -1386,7 +1386,20 @@ span[data-icon] {
   clear: both;
 }
 .ya-school-registration-btn-group button {
-  margin: 0 7.5px;
+  margin: 5px 0;
+  -webkit-box-sizing: 0 0 5px black;
+  -moz-box-sizing: 0 0 5px black;
+  box-sizing: 0 0 5px black;
+}
+
+.ya-button-row .btn {
+  width: 150px;
+  margin: 10px 5px;
+}
+
+#ie7 .ya-school-registration-btn-group .btn {
+  width: auto !important;
+  margin: 10px 5px;
 }
 
 .ya-collapse-icon {
@@ -1415,6 +1428,13 @@ span[data-icon] {
   clear: both;
 }
 
+#ie7 .accordion-toggle:hover {
+  text-decoration: none !important;
+}
+#ie7 .accordion-toggle:focus {
+  text-decoration: none !important;
+}
+
 .ya-new-session-container {
   background-color: #fff9e6;
   border: 2px solid #999999;
@@ -1437,43 +1457,22 @@ span[data-icon] {
   clear: both;
 }
 .ya-new-session-container .ya-new-session-items input {
-  width: 95%;
+  width: 100%;
+  *width: 95%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
 }
 .ya-new-session-container .ya-new-session-items textarea {
-  width: 95%;
+  width: 100%;
+  *width: 95%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
   height: 100px;
-}
-.ya-new-session-container .ya-new-session-items .ya-new-session-module {
-  float: left;
-  margin-left: 2.12766%;
-  width: 14.89362%;
-}
-.ya-new-session-container .ya-new-session-items .ya-new-session-module:first-child {
-  margin-left: 0;
-}
-.ya-new-session-container .ya-new-session-items .ya-new-session-title {
-  float: left;
-  margin-left: 2.12766%;
-  width: 23.40426%;
-}
-.ya-new-session-container .ya-new-session-items .ya-new-session-title:first-child {
-  margin-left: 0;
-}
-.ya-new-session-container .ya-new-session-items .ya-new-session-description {
-  float: left;
-  margin-left: 2.12766%;
-  width: 27.65958%;
-}
-.ya-new-session-container .ya-new-session-items .ya-new-session-description:first-child {
-  margin-left: 0;
-}
-.ya-new-session-container .ya-new-session-items .ya-new-session-objective {
-  float: left;
-  margin-left: 2.12766%;
-  width: 27.65958%;
-}
-.ya-new-session-container .ya-new-session-items .ya-new-session-objective:first-child {
-  margin-left: 0;
+  display: block;
 }
 .ya-new-session-container .ya-new-session-items .ya-new-session-category {
   float: left;
@@ -1561,14 +1560,6 @@ select.ya-empty {
 }
 .ya-learning-objective-list:after, .ya-survey-question-list:after {
   clear: both;
-}
-.ya-learning-objective-list .ya-learning-objective-item, .ya-survey-question-list .ya-learning-objective-item, .ya-survey-question-list .ya-survey-question-item {
-  float: left;
-  margin-left: 2.12766%;
-  width: 31.9149%;
-}
-.ya-learning-objective-list .ya-learning-objective-item:first-child, .ya-survey-question-list .ya-learning-objective-item:first-child, .ya-survey-question-list .ya-survey-question-item:first-child {
-  margin-left: 0;
 }
 .ya-learning-objective-list .ya-learning-objective-item textarea, .ya-survey-question-list .ya-learning-objective-item textarea, .ya-survey-question-list .ya-survey-question-item textarea {
   width: 96%;

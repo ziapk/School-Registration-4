@@ -39,7 +39,7 @@
     <script type="text/javascript" src="js/modernizr.custom.82095.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>    
 	<script src="js/school-registration-4.js"></script>    
-    <!--[if lte IE 7]>
+     <!--[if lte IE 7]>
 	    <script type="text/javascript" src="js/lte-ie7.js"></script>
     <![endif]-->
 </head>
@@ -212,9 +212,43 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="ya-school-registration-btn-group">
-                            <button type="button" class="btn btn-success input-small">Save</button>
-                            <button type="button" class="btn input-small">Cancel</button>
+                        <div class="ya-school-registration-btn-group row-fluid">
+                        	<div class="span3">
+							<button class="btn input-medium"><span class="icon-undo"></span> Add New Trainer</button>
+                            </div>
+                            <div class="span3"><label>Add trak trainer</label>
+                            <select>
+                                <option>Select Trainer</option>
+                            </select></div>
+                            <div class="span3">
+                                <button class="btn btn-success input-medium">Add to Trainer</button>
+                            </div>
+                            <div class="span3">
+                            <button type="button" class="btn btn-success input-medium">Save Track</button>
+                            </div>
+                        </div>
+                        <div class="ya-widget visible-desktop visible-tablet">
+                            <form class="form-inline">
+                            
+                            <p><label class="checkbox"><input type="checkbox" id="invoke-clause"> &nbsp;&nbsp; Invoke Consistency Clause</label>
+                            <span data-icon="T" aria-hidden="true" class="ya-help"></span></p>
+                            <div class="hidden show-on-clause" style="display: block; visibility: visible;">
+                                <label>Explain how you maintain consistency of instruction</label>
+                                <textarea rows="5" class="input-block-level clause-description"></textarea>
+                                <div class="ya-button-row clearfix">
+                                    <button class="btn btn-success show-clause-description">Save</button>
+                                    <button class="btn cancel-memo">Cancel</button>
+                                </div>
+                            </div>
+                            <!-- SHOW THESE AFTER USER CLICKS SAVE -->
+                                <div class="for-clause-description hidden" style="display: none; visibility: visible;">
+                                    <div class="ya-button-row clearfix">
+                                        <p class="live-desc"></p>
+                                        <a class="ya-action for-show-clause-description " href="#">Edit</a>
+                                    </div>
+                                </div>
+                            <!-- END SHOW -->
+                            </form>
                         </div>
                     </div><!-- end Edit Track -->
                 </article><!-- end Hot Spiritually Active Yoga Training -->
@@ -243,29 +277,29 @@
                     <button type="button" class="ya-add-new-session-btn btn btn-success input-larget">Add New Session / Class</button>
                     <div class="ya-new-session-container">
                         <h3>New Session / Class</h3>
-                        <div class="ya-new-session-items">
-                            <div class="ya-new-session-module">
+                        <div class="ya-new-session-items row-fluid">
+                            <div class="ya-new-session-module span3">
                                 <label for="new-session-module">
                                     Module/Session #
                                     <span class="ya-required-mark">*</span>
                                 </label>
                                 <input type="text" id="new-session-module"/>
                             </div>
-                            <div class="ya-new-session-title">
+                            <div class="ya-new-session-title span3">
                                 <label for="new-session-title">
                                     Title
                                     <span class="ya-required-mark">*</span>
                                 </label>
                                 <input type="text" id="new-session-title"/>
                             </div>
-                            <div class="ya-new-session-description">
+                            <div class="ya-new-session-description span3">
                                 <label for="new-session-description">
                                     Description
                                     <span class="ya-required-mark">*</span>
                                 </label>
                                 <textarea id="new-session-description"></textarea>
                             </div>
-                            <div class="ya-new-session-objective">
+                            <div class="ya-new-session-objective span3">
                                 <label for="new-session-objective">
                                     Learning Objective
                                     <span class="ya-required-mark">*</span>
@@ -383,26 +417,26 @@
                     <div id="ya-learning-objectives-container" class="accordion-body collapse">
                         <div class="accordion-inner">
                             <p>Please enter up to five learning objectives for this Track</p>
-                            <div class="ya-learning-objective-list">
-                                <div class="ya-learning-objective-item">
+                            <div class="ya-learning-objective-list row-fluid">
+                                <div class="ya-learning-objective-item span4">
                                     <label for="objective1">Objective 1</label>
                                     <textarea id="objective1"></textarea>
                                 </div>
-                                <div class="ya-learning-objective-item">
+                                <div class="ya-learning-objective-item span4">
                                     <label for="objective2">Objective 2</label>
                                     <textarea id="objective2"></textarea>
                                 </div>
-                                <div class="ya-learning-objective-item">
+                                <div class="ya-learning-objective-item span4">
                                     <label for="objective3">Objective 3</label>
                                     <textarea id="objective3"></textarea>
                                 </div>
-                            </div>	
-                            <div class="ya-learning-objective-list">	
-                                <div class="ya-learning-objective-item">
+                            </div>
+                            <div class="ya-learning-objective-list row-fluid">	
+                                <div class="ya-learning-objective-item span4">
                                     <label for="objective4">Objective 4</label>
                                     <textarea id="objective4"></textarea>
                                 </div>
-                                <div class="ya-learning-objective-item">
+                                <div class="ya-learning-objective-item span4">
                                     <label for="objective5">Objective 5</label>
                                     <textarea id="objective5"></textarea>
                                 </div>
@@ -426,16 +460,16 @@
                     <div id="ya-survey-questions-container" class="accordion-body collapse">
                         <div class="accordion-inner">
                             <p>You have the ability to include up to three questions of your own on the evaluation that trainees fill out when registering with Yoga Alliance. The results of these questions will be for your use only and won’t be shared publicly.</p>
-                            <div class="ya-survey-question-list">
-                                <div class="ya-survey-question-item">
+                            <div class="ya-survey-question-list row-fluid">
+                                <div class="ya-survey-question-item span4">
                                     <label for="question1">Question 1</label>
                                     <textarea id="question1"></textarea>
                                 </div>
-                                <div class="ya-survey-question-item">
+                                <div class="ya-survey-question-item span4">
                                     <label for="question2">Question 2</label>
                                     <textarea id="question2"></textarea>
                                 </div>
-                                <div class="ya-survey-question-item">
+                                <div class="ya-survey-question-item span4">
                                     <label for="question3">Question 3</label>
                                     <textarea id="question3"></textarea>
                                 </div>
