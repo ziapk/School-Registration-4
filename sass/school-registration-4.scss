@@ -173,12 +173,13 @@ span[data-icon] {
 		}
 	}
 }
-
+$bs: 0 0 5px #000;
 .ya-school-registration-btn-group {
 	@include makeFluidRow();
 	margin: $margin_padding 0;
 	button {
-		margin: 0 $margin_padding / 2;
+		margin:$margin_padding/3 0 ;
+		@include box-sizing($bs);
 	}
 }
 
