@@ -164,6 +164,7 @@ span[data-icon] {
 	}
 	.ya-yoga-type-list {
 		@include makeFluidColumn(5);
+		
 		input[type='checkbox'] {
 			@include ya-checkbox-control;
 		}
@@ -173,6 +174,10 @@ span[data-icon] {
 		}
 	}
 }
+#ie7 .ya-yoga-type-list{
+		width: 39%;
+}
+
 $bs: 0 0 5px #000;
 .ya-school-registration-btn-group {
 	@include makeFluidRow();
@@ -182,7 +187,16 @@ $bs: 0 0 5px #000;
 		@include box-sizing($bs);
 	}
 }
+.ya-button-row .btn{
+	width:150px;
+	margin:10px 5px;
+}
 
+#ie7 .ya-school-registration-btn-group .btn{
+	width:auto !important;
+	margin:10px 5px;
+	
+}
 .ya-collapse-icon {
 	@include ya-collapse-icon;
 }

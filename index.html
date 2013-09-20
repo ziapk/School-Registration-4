@@ -214,7 +214,7 @@
                         </div>
                         <div class="ya-school-registration-btn-group row-fluid">
                         	<div class="span3">
-							<button class="btn input-medium"><span class="icon-undo"></span> Add New Trainer</a>
+							<button class="btn input-medium"><span class="icon-undo"></span> Add New Trainer</button>
                             </div>
                             <div class="span3"><label>Add trak trainer</label>
                             <select>
@@ -224,8 +224,31 @@
                                 <button class="btn btn-success input-medium">Add to Trainer</button>
                             </div>
                             <div class="span3">
-                            <button type="button" class="btn btn-success input-medium">Save</button>
+                            <button type="button" class="btn btn-success input-medium">Save Track</button>
                             </div>
+                        </div>
+                        <div class="ya-widget visible-desktop visible-tablet">
+                            <form class="form-inline">
+                            
+                            <p><label class="checkbox"><input type="checkbox" id="invoke-clause"> &nbsp;&nbsp; Invoke Consistency Clause</label>
+                            <span data-icon="T" aria-hidden="true" class="ya-help"></span></p>
+                            <div class="hidden show-on-clause" style="display: block; visibility: visible;">
+                                <label>Explain how you maintain consistency of instruction</label>
+                                <textarea rows="5" class="input-block-level clause-description"></textarea>
+                                <div class="ya-button-row clearfix">
+                                    <button class="btn btn-success show-clause-description">Save</button>
+                                    <button class="btn cancel-memo">Cancel</button>
+                                </div>
+                            </div>
+                            <!-- SHOW THESE AFTER USER CLICKS SAVE -->
+                                <div class="for-clause-description hidden" style="display: none; visibility: visible;">
+                                    <div class="ya-button-row clearfix">
+                                        <p class="live-desc"></p>
+                                        <a class="ya-action for-show-clause-description " href="#">Edit</a>
+                                    </div>
+                                </div>
+                            <!-- END SHOW -->
+                            </form>
                         </div>
                     </div><!-- end Edit Track -->
                 </article><!-- end Hot Spiritually Active Yoga Training -->

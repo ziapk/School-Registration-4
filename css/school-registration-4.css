@@ -1368,6 +1368,10 @@ span[data-icon] {
   margin: 5px 0 0 0;
 }
 
+#ie7 .ya-yoga-type-list {
+  width: 39%;
+}
+
 .ya-school-registration-btn-group {
   width: 100%;
   *zoom: 1;
@@ -1386,6 +1390,16 @@ span[data-icon] {
   -webkit-box-sizing: 0 0 5px black;
   -moz-box-sizing: 0 0 5px black;
   box-sizing: 0 0 5px black;
+}
+
+.ya-button-row .btn {
+  width: 150px;
+  margin: 10px 5px;
+}
+
+#ie7 .ya-school-registration-btn-group .btn {
+  width: auto !important;
+  margin: 10px 5px;
 }
 
 .ya-collapse-icon {
