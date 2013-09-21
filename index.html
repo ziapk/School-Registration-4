@@ -212,32 +212,33 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="ya-school-registration-btn-group row-fluid">
+                        <div class="row-fluid ya-track-btns">
                         	<div class="span3">
-							<button class="btn input-medium"><span class="icon-undo"></span> Add New Trainer</button>
+                                <label class="hidden-phone">&nbsp;</label>
+                                <a href="#" class="btn input-medium"><span class="icon-undo"></span> Add New Trainer</a>
+                                <p><a href="#">(Return to Staff and Trainers)</a></p>
                             </div>
+                            
                             <div class="span3"><label>Add trak trainer</label>
                             <select>
-                                <option>Select Trainer</option>
+                            	<option>Select Trainer</option>
                             </select></div>
                             <div class="span3">
-                                <button class="btn btn-success input-medium">Add to Trainer</button>
+	                            <label class="hidden-phone">&nbsp;</label>
+	                            <a href="#" class="btn btn-success input-medium">Add to Trainer</a>
                             </div>
-                            <div class="span3">
-                            <button type="button" class="btn btn-success input-medium">Save Track</button>
-                            </div>
-                        </div>
-                        <div class="ya-widget visible-desktop visible-tablet">
+                        </div><!--ya-track-btns -->
+                        <div class="ya-widget">
                             <form class="form-inline">
                             
                             <p><label class="checkbox"><input type="checkbox" id="invoke-clause"> &nbsp;&nbsp; Invoke Consistency Clause</label>
                             <span data-icon="T" aria-hidden="true" class="ya-help"></span></p>
-                            <div class="hidden show-on-clause" style="display: block; visibility: visible;">
+                            <div class="hidden show-on-clause">
                                 <label>Explain how you maintain consistency of instruction</label>
                                 <textarea rows="5" class="input-block-level clause-description"></textarea>
-                                <div class="ya-button-row clearfix">
-                                    <button class="btn btn-success show-clause-description">Save</button>
-                                    <button class="btn cancel-memo">Cancel</button>
+                                <div class="ya-track-btns clearfix">
+                                    <button class="btn btn-success input-medium show-clause-description">Save</button>
+                                    <button class="btn cancel-memo input-medium">Cancel</button>
                                 </div>
                             </div>
                             <!-- SHOW THESE AFTER USER CLICKS SAVE -->
@@ -249,6 +250,10 @@
                                 </div>
                             <!-- END SHOW -->
                             </form>
+                        </div>
+                        <div class="ya-track-btns row-fluid">
+                        	<button class="btn input-medium btn-success">Save</button>
+                            <button class="btn input-medium">Cancel</button>
                         </div>
                     </div><!-- end Edit Track -->
                 </article><!-- end Hot Spiritually Active Yoga Training -->

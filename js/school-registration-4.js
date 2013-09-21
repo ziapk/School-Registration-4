@@ -80,6 +80,11 @@ jQuery(function(){
 			jQuery(this).html(hide) 
 		}
 	})
+	
+	
+	
+	
+	
 	jQuery('.show-invoke-clause').click(function(){
 		
 	});
@@ -106,6 +111,14 @@ jQuery(function(){
 			jQuery('.hide-for-clause').show();
 		}
 	});
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	jQuery(".cancel-memo").click (function () {
 			jQuery("#invoke-clause").trigger('click');

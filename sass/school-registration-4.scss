@@ -5,8 +5,25 @@ scss file for school registration 4
 */
 
 @import "bootstrap-responsive";
+$desktop: 1200px;
+$tablet	:	979px;
+$mobile	:	767px;
 
+@mixin for-screen ($media){
+	@if $media == desktop {
+    	@media (max-width: $desktop) { @content; }
+  }
+ @else if $media == tablet {
+	@media (max-width: $tablet) { @content; }
+  }	
+ @else if $media == mobile {
+	@media (max-width: $mobile) { @content; }
+  }
+  @else{
+	@content;
+  }	
 
+}
 $gridFluidColumnWidth: 6.38298%;
 $gridFluidGutterWidth: 2.12766%;
 
@@ -151,19 +168,31 @@ span[data-icon] {
 	}
 	.ya-edit-track-controls{
 		@include makeFluidColumn(7);
+		@include for-screen (mobile){@include makeFluidColumn(12)};
 		.ya-select-designation {
 			@include makeFluidColumn(4);
+			@include for-screen (tablet){@include makeFluidColumn(6)};
+			@include for-screen (mobile){@include makeFluidColumn(12)};
 		}
 		.ya-track-name {
 			@include makeFluidColumn(7.5, 0.5);
+			@include for-screen (tablet){ @include makeFluidColumn(6)};
+			@include for-screen (mobile){ @include makeFluidColumn(12); margin-left: 0;};
 			input {
-				width: 95%;
+				width:100%;
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				height: auto;
+				*width: 95%;
 			}	
 		}
 
 	}
 	.ya-yoga-type-list {
 		@include makeFluidColumn(5);
+		@include for-screen (tablet){ @include makeFluidColumn(4);}
+		@include for-screen (mobile){ @include makeFluidColumn(12); margin-left: 0; margin-bottom: 15px !important;};
 		
 		input[type='checkbox'] {
 			@include ya-checkbox-control;
@@ -185,13 +214,16 @@ $bs: 0 0 5px #000;
 	button {
 		margin:$margin_padding/3 0 ;
 		@include box-sizing($bs);
+		@include for-screen (mobile){ 
+			width:170px; 
+			margin-left: auto; 
+			margin-right: auto; 
+			margin-bottom: 10px !important; 
+			display:block !important; 
+			float:none !important;};
+		
 	}
 }
-.ya-button-row .btn{
-	width:150px;
-	margin:10px 5px;
-}
-
 #ie7 .ya-school-registration-btn-group .btn{
 	width:auto !important;
 	margin:10px 5px;
@@ -246,32 +278,47 @@ $bs: 0 0 5px #000;
 		}
 		.ya-new-session-category {
 			@include makeFluidColumn(2.6);	
+			@include for-screen (mobile){ @include makeFluidColumn(12); margin-left: 0; margin-bottom: 15px !important;};
 		}
 		.ya-new-session-contact-hours {
 			@include makeFluidColumn(2);
+			@include for-screen (mobile){ @include makeFluidColumn(12); margin-left: 0; margin-bottom: 15px !important;};
 		}
 		.ya-new-session-taught-by {
 			@include makeFluidColumn(3.8);
+			@include for-screen (mobile){ 
+				@include makeFluidColumn(12); margin-left: 0; margin-bottom: 15px !important;
+				label{
+					float:none;
+				}
+			};
 			.ya-taughts-select {
 				float: left;
 				width: 65%;
 				margin-left: 7%;
+				@include makeFluidColumn(12); margin-left: 0; margin-bottom: 15px !important;
 				select {
 					margin-left: $margin_padding;
+					@include for-screen (mobile){ @include makeFluidColumn(12); margin-left: 0; margin-bottom: 15px !important;};
+					
 				}
 				input[type='radio'] {
 					width: auto;
 				}
+				
 			}
+			
 		}
 		.ya-new-session-eryt {
 			@include makeFluidColumn(2);	
 			margin-top: -20px;
+			@include for-screen (mobile){ @include makeFluidColumn(12); margin-left: 0; margin-bottom: 15px !important;};
 		}
 		.ya-new-session-total-hours {
 			@include makeFluidColumn(1.6);
 			margin-top: 29px;
 			text-align: center;
+			@include for-screen (mobile){ @include makeFluidColumn(12); margin: 0; text-align:left; margin-bottom: 15px !important;};
 		}
 	}	
 }
@@ -309,6 +356,7 @@ select.ya-empty {
 }
 .ya-submit-track-container {
 	margin-left: $margin_padding * 2;
+	@include for-screen (mobile){margin : 0;};
 }
 .ya-control-group {
 	@include ya-control-group;
@@ -321,4 +369,74 @@ select.ya-empty {
 input[type='radio'] {
 	float: left;
 	margin-right: 6px;
+}
+.ya-track-btns{
+	.span3{
+	.btn{
+		margin:0 auto 5px;
+		@include for-screen(tablet){
+			min-width:inherit !important;
+			width: 100% !important;
+			-moz-box-sizing:border-box;
+			-webkit-box-sizing:border-box;
+			box-sizing:border-box;
+			span{
+				display:none;
+			}
+		}
+		@include for-screen(mobile){
+			text-align:center;
+			float:none;
+			margin-bottom:10px;
+			-moz-box-sizing:border-box;			
+			-webkit-box-sizing:border-box;			
+			box-sizing:border-box;			
+			min-width:150px !important;
+			width: auto !important;
+			font-family: $Bold;
+		}
+	}
+	}
+}
+.ya-track-btns{
+	.span3{
+		.btn{
+			display: inline-block;
+			margin:0 auto 5px;
+			@include for-screen (tablet){width: auto;};
+			@include for-screen (mobile){width: auto;};
+			span{
+				@include for-screen (tablet){display: none};
+				@include for-screen (mobile){display: none};
+			}
+		}
+	}
+}
+.ya-button-row .btn{
+	width:150px;
+	margin:10px 5px;
+	@include for-screen (mobile){ margin:10px 0 !important;
+	};
+}
+@include for-screen (mobile){
+body{
+	margin:0 !important; padding:0 !important;
+}
+.ya-track-details{
+	.ya-track-details-container{ 
+		width: 100% !important;
+		display:block !important;
+		height: auto !important;
+	> img{
+		float:none !important;
+		display:block !important;
+		margin:0 auto;
+		height: auto !important;
+	}
+	}
+	.pull-left{
+		float:none !important;
+	}
+}
+
 }
