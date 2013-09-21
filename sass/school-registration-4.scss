@@ -440,3 +440,44 @@ body{
 }
 
 }
+.live-desc{
+	font-style:italic;
+}
+.btn-link{
+    color: #96171A;
+    font-size: 13px;
+    padding: 0;
+}
+.ya-trainers-row{
+    border-bottom: 2px solid #CCCCCC;
+    margin: 15px 0;
+    padding-bottom: 10px;
+}
+.ya-seperator {
+    border-left: 1px solid #888888;
+    margin: 0 2px 0 0;
+}
+.ya-name {
+    font-family: $Bold;
+    font-size: 18px;
+}
+.ya-tick {
+    color: #447E2B;
+    font-size: 13px;
+    margin: 0 3px;
+}
+.ya-controls{
+	text-align:right;
+	@include for-screen(mobile){
+		text-align:left;
+	}
+}
+.ya-date {
+    font-family: $Bold;
+    margin: 0 0 0 20px;
+	display:inline-block;
+		@include for-screen(mobile){
+		 float: right;
+	}
+
+}
